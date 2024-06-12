@@ -197,11 +197,14 @@ void BOSS::restart() {
 	dead_time = 0;
 	end_x = 0;
 	end_y = 1000;
+	boss_heart = 30;
 	ENDING.SetTopLeft(0, 1000);
 	for (int i = 0; i < 5; i++) {
 		attack_DG[i] = 1;
 		attack_x[i] = 495;
 		attack_y[i] = 400;
+		attack[i].SetTopLeft(attack_x[i], attack_y[i]);
 	}
 }
+
 
