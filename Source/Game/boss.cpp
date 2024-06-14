@@ -6,32 +6,32 @@ BOSS::BOSS() {
 	
 }
 void BOSS::Boss_init() {
-	Boss_background.LoadBitmap("../Resources/background/boss_background.bmp");
+	Boss_background.LoadBitmap("Resources/background/boss_background.bmp");
 	Boss_background.SetTopLeft(138, 85);
-	Boss.LoadBitmap("../Resources/boss/boss.bmp");
+	Boss.LoadBitmap("Resources/boss/boss.bmp");
 	Boss.SetTopLeft(370, 220);
-	Boss2.LoadBitmap("../Resources/boss/boss2.bmp");
+	Boss2.LoadBitmap("Resources/boss/boss2.bmp");
 	Boss2.SetTopLeft(370, 220);
-	Boss_Die[0].LoadBitmap("../Resources/boss/boss_dead1.bmp");
+	Boss_Die[0].LoadBitmap("Resources/boss/boss_dead1.bmp");
 	Boss_Die[0].SetTopLeft(370, 220);
-	Boss_Die[1].LoadBitmap("../Resources/boss/boss_dead2.bmp");
+	Boss_Die[1].LoadBitmap("Resources/boss/boss_dead2.bmp");
 	Boss_Die[1].SetTopLeft(370, 220);
-	Boss_Die[2].LoadBitmap("../Resources/boss/boss_dead3.bmp");
+	Boss_Die[2].LoadBitmap("Resources/boss/boss_dead3.bmp");
 	Boss_Die[2].SetTopLeft(370, 220);
-	Boss_Die[3].LoadBitmap("../Resources/boss/boss_dead4.bmp");
+	Boss_Die[3].LoadBitmap("Resources/boss/boss_dead4.bmp");
 	Boss_Die[3].SetTopLeft(370, 220);
-	Boss_Die[4].LoadBitmap("../Resources/boss/boss_dead5.bmp");
+	Boss_Die[4].LoadBitmap("Resources/boss/boss_dead5.bmp");
 	Boss_Die[4].SetTopLeft(370, 220);
-	Boss_Die[5].LoadBitmap("../Resources/boss/boss_dead6.bmp");
+	Boss_Die[5].LoadBitmap("Resources/boss/boss_dead6.bmp");
 	Boss_Die[5].SetTopLeft(370, 220);
-	ENDING.LoadBitmap("../Resources/END/END1.bmp");
+	ENDING.LoadBitmap("Resources/END/END1.bmp");
 	ENDING.SetTopLeft(0, 1000);
-	ENDING2.LoadBitmap("../Resources/END/boss_end.bmp");
+	ENDING2.LoadBitmap("Resources/END/boss_end.bmp");
 	ENDING2.SetTopLeft(0, 90);
-	ENDING3.LoadBitmap("../Resources/END/boss_end2.bmp");
+	ENDING3.LoadBitmap("Resources/END/boss_end2.bmp");
 	ENDING3.SetTopLeft(0, 90);
 	for (int i = 0; i < 5; i++) {
-		attack[i].LoadBitmap("../Resources/player/ball.bmp");
+		attack[i].LoadBitmap("Resources/player/ball.bmp");
 	}
 	
 }

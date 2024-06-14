@@ -31,4 +31,3 @@
 #define RESOLUTION_X     1920           
 //! 全螢幕用，請設定成目前視窗的解析度 (height)。
 #define RESOLUTION_Y     1080          
-

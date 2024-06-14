@@ -73,104 +73,104 @@
 		}
 	}
 	void Round_func::init_brick() {
-		background.LoadBitmap("../Resources/background/background.bmp");
+		background.LoadBitmap("Resources/background/background.bmp");
 		background.SetTopLeft(120, 90);
-		ENDING.LoadBitmap("../Resources/END/ending.bmp");
+		ENDING.LoadBitmap("Resources/END/ending.bmp");
 		ENDING.SetTopLeft(60, 110);
-		START.LoadBitmap("../Resources/menu/start.bmp");
+		START.LoadBitmap("Resources/menu/start.bmp");
 		START.SetTopLeft(0, 1000);
-		Ball.Ball.LoadBitmap("../Resources/player/ball.bmp",RGB(255,255,255));
+		Ball.Ball.LoadBitmap("Resources/player/ball.bmp",RGB(255,255,255));
 		Ball.Ball.SetTopLeft(450, 700);
-		Play.player.LoadBitmap("../Resources/player/player.bmp");
-		Play.player_heart.LoadBitmap("../Resources/player/player_heart.bmp");
+		Play.player.LoadBitmap("Resources/player/player.bmp");
+		Play.player_heart.LoadBitmap("Resources/player/player_heart.bmp");
 		for (int i = 0; i < 120; i++) {
 			if (i>=0&&i<15) {
-				brick_black[i].LoadBitmap("../Resources/brick/brick_green.bmp");
+				brick_black[i].LoadBitmap("Resources/brick/brick_green.bmp");
 			}
 			else if (i >= 15 && i < 30) {
-				brick_black[i].LoadBitmap("../Resources/brick/blue.bmp");
+				brick_black[i].LoadBitmap("Resources/brick/blue.bmp");
 			}
 			else if (i >= 30 && i < 45) {
-				brick_black[i].LoadBitmap("../Resources/brick/blue2.bmp");
+				brick_black[i].LoadBitmap("Resources/brick/blue2.bmp");
 			}
 			else if (i >= 45 && i < 60) {
-				brick_black[i].LoadBitmap("../Resources/brick/orange.bmp");
+				brick_black[i].LoadBitmap("Resources/brick/orange.bmp");
 			}
 			else if (i >= 60 && i < 75) {
-				brick_black[i].LoadBitmap("../Resources/brick/orange2.bmp");
+				brick_black[i].LoadBitmap("Resources/brick/orange2.bmp");
 			}
 			else if (i >= 75 && i < 90) {
-				brick_black[i].LoadBitmap("../Resources/brick/iron.bmp");
+				brick_black[i].LoadBitmap("Resources/brick/iron.bmp");
 			}
 			else if (i >= 90 && i < 105) {
-				brick_black[i].LoadBitmap("../Resources/brick/pink.bmp");
+				brick_black[i].LoadBitmap("Resources/brick/pink.bmp");
 			}
 			else if (i >= 105 && i < 120) {
-				brick_black[i].LoadBitmap("../Resources/brick/gold.bmp");
+				brick_black[i].LoadBitmap("Resources/brick/gold.bmp");
 			}
 			
 		}
-		background_round[1].LoadBitmap("../Resources/round/round1.bmp");
+		background_round[1].LoadBitmap("Resources/round/round1.bmp");
 		background_round[1].SetTopLeft(0, 90);
-		background_round[2].LoadBitmap("../Resources/round/round2.bmp");
+		background_round[2].LoadBitmap("Resources/round/round2.bmp");
 		background_round[2].SetTopLeft(0, 90);
-		background_round[3].LoadBitmap("../Resources/round/round3.bmp");
+		background_round[3].LoadBitmap("Resources/round/round3.bmp");
 		background_round[3].SetTopLeft(0, 90);
-		background_round[4].LoadBitmap("../Resources/round/round4.bmp");
+		background_round[4].LoadBitmap("Resources/round/round4.bmp");
 		background_round[4].SetTopLeft(0, 90);
-		background_round[5].LoadBitmap("../Resources/round/round5.bmp");
+		background_round[5].LoadBitmap("Resources/round/round5.bmp");
 		background_round[5].SetTopLeft(0, 90);
-		background_round[6].LoadBitmap("../Resources/round/round6.bmp");
+		background_round[6].LoadBitmap("Resources/round/round6.bmp");
 		background_round[6].SetTopLeft(0, 90);
-		background_round[7].LoadBitmap("../Resources/round/round7.bmp");
+		background_round[7].LoadBitmap("Resources/round/round7.bmp");
 		background_round[7].SetTopLeft(0, 90);
-		background_round[8].LoadBitmap("../Resources/round/round8.bmp");
+		background_round[8].LoadBitmap("Resources/round/round8.bmp");
 		background_round[8].SetTopLeft(0, 90);
-		background_round[9].LoadBitmap("../Resources/round/round9.bmp");
+		background_round[9].LoadBitmap("Resources/round/round9.bmp");
 		background_round[9].SetTopLeft(0, 90);
-		background_round[10].LoadBitmap("../Resources/round/round10.bmp");
+		background_round[10].LoadBitmap("Resources/round/round10.bmp");
 		background_round[10].SetTopLeft(0, 90);
-		background_round[11].LoadBitmap("../Resources/round/round11.bmp");
+		background_round[11].LoadBitmap("Resources/round/round11.bmp");
 		background_round[11].SetTopLeft(0, 90);
-		background_round[12].LoadBitmap("../Resources/round/round12.bmp");
+		background_round[12].LoadBitmap("Resources/round/round12.bmp");
 		background_round[12].SetTopLeft(0, 90);
-		background_round[13].LoadBitmap("../Resources/round/round13.bmp");
+		background_round[13].LoadBitmap("Resources/round/round13.bmp");
 		background_round[13].SetTopLeft(0, 90);
-		background_round[14].LoadBitmap("../Resources/round/round14.bmp");
+		background_round[14].LoadBitmap("Resources/round/round14.bmp");
 		background_round[14].SetTopLeft(0, 90);
-		background_round[15].LoadBitmap("../Resources/round/round15.bmp");
+		background_round[15].LoadBitmap("Resources/round/round15.bmp");
 		background_round[15].SetTopLeft(0, 90);
-		background_round[16].LoadBitmap("../Resources/round/round16.bmp");
+		background_round[16].LoadBitmap("Resources/round/round16.bmp");
 		background_round[16].SetTopLeft(0, 90);
-		background_round[17].LoadBitmap("../Resources/round/round17.bmp");
+		background_round[17].LoadBitmap("Resources/round/round17.bmp");
 		background_round[17].SetTopLeft(0, 90);
-		background_round[18].LoadBitmap("../Resources/round/round18.bmp");
+		background_round[18].LoadBitmap("Resources/round/round18.bmp");
 		background_round[18].SetTopLeft(0, 90);
-		background_round[19].LoadBitmap("../Resources/round/round19.bmp");
+		background_round[19].LoadBitmap("Resources/round/round19.bmp");
 		background_round[19].SetTopLeft(0, 90);
-		background_round[20].LoadBitmap("../Resources/round/round20.bmp");
+		background_round[20].LoadBitmap("Resources/round/round20.bmp");
 		background_round[20].SetTopLeft(0, 90);
-		background_round[21].LoadBitmap("../Resources/round/round21.bmp");
+		background_round[21].LoadBitmap("Resources/round/round21.bmp");
 		background_round[21].SetTopLeft(0, 90);
-		background_round[22].LoadBitmap("../Resources/round/round22.bmp");
+		background_round[22].LoadBitmap("Resources/round/round22.bmp");
 		background_round[22].SetTopLeft(0, 90);
-		background_round[23].LoadBitmap("../Resources/round/round23.bmp");
+		background_round[23].LoadBitmap("Resources/round/round23.bmp");
 		background_round[23].SetTopLeft(0, 90);
-		background_round[24].LoadBitmap("../Resources/round/round24.bmp");
+		background_round[24].LoadBitmap("Resources/round/round24.bmp");
 		background_round[24].SetTopLeft(0, 90);
-		background_round[25].LoadBitmap("../Resources/round/round25.bmp");
+		background_round[25].LoadBitmap("Resources/round/round25.bmp");
 		background_round[25].SetTopLeft(0, 90);
-		background_round[26].LoadBitmap("../Resources/round/round26.bmp");
+		background_round[26].LoadBitmap("Resources/round/round26.bmp");
 		background_round[26].SetTopLeft(0, 90);
-		background_round[27].LoadBitmap("../Resources/round/round27.bmp");
+		background_round[27].LoadBitmap("Resources/round/round27.bmp");
 		background_round[27].SetTopLeft(0, 90);
-		background_round[28].LoadBitmap("../Resources/round/round28.bmp");
+		background_round[28].LoadBitmap("Resources/round/round28.bmp");
 		background_round[28].SetTopLeft(0, 90);
-		background_round[29].LoadBitmap("../Resources/round/round29.bmp");
+		background_round[29].LoadBitmap("Resources/round/round29.bmp");
 		background_round[29].SetTopLeft(0, 90);
-		background_round[30].LoadBitmap("../Resources/round/round30.bmp");
+		background_round[30].LoadBitmap("Resources/round/round30.bmp");
 		background_round[30].SetTopLeft(0, 90);
-		background_round[0].LoadBitmap("../Resources/round/round31.bmp");
+		background_round[0].LoadBitmap("Resources/round/round31.bmp");
 		background_round[0].SetTopLeft(0, 90);
 	}
 

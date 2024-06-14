@@ -37,8 +37,6 @@
  *      2. Replace the demonstration of animation as a new bouncing ball.
  *      3. Use ShowInitProgress(percent) to display loading progress.
 */
-
-
 #include "round.h"
 #include "Boss.h"
 
@@ -52,7 +50,6 @@ namespace game_framework {
 		AUDIO_LAKE,				// 1
 		AUDIO_NTUT				// 2
 	};
-
 
 	/////////////////////////////////////////////////////////////////////////////
 	// 這個class為遊戲的遊戲開頭畫面物件
@@ -70,7 +67,7 @@ namespace game_framework {
 	protected:
 		void OnShow();									// 顯示這個狀態的遊戲畫面
 	private:
-		CMovingBitmap logo;		// csie的logo
+		CMovingBitmap logo;								// csie的logo
 		CMovingBitmap start;
 	};
 
@@ -92,11 +89,10 @@ namespace game_framework {
 		void OnMouseMove(UINT nFlags, CPoint point);	// 處理滑鼠的動作 
 		void OnRButtonDown(UINT nFlags, CPoint point);  // 處理滑鼠的動作
 		void OnRButtonUp(UINT nFlags, CPoint point);	// 處理滑鼠的動作
-		
 	protected:
 		void OnMove();									// 移動遊戲元素
 		void OnShow();									// 顯示這個狀態的遊戲畫面
-		//腳色物件
+
 		int start = 1;
 		int roundnumber = 1;
 		int restrat_time = 0;
@@ -105,7 +101,6 @@ namespace game_framework {
 		CMovingBitmap Menu2;
 		Round_func round;
 		BOSS boss;
-		
 	};
 
 	/////////////////////////////////////////////////////////////////////////////
@@ -125,4 +120,4 @@ namespace game_framework {
 		int counter;	// 倒數之計數器
 	};
 
-};
+}

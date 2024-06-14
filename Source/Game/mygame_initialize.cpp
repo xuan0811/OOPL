@@ -37,14 +37,13 @@ void CGameStateInit::OnBeginState()
 {
 }
 
-void CGameStateInit::show_start_background() {
-	start.LoadBitmapByString({ "../resources/menu/start_background.bmp" });
-	start.SetTopLeft(120, 90);
-}
-
 void CGameStateInit::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
 
+}
+void CGameStateInit::show_start_background() {
+	start.LoadBitmap({ "Resources/menu/start_background.bmp" });
+	start.SetTopLeft(120, 90);
 }
 
 void CGameStateInit::OnLButtonDown(UINT nFlags, CPoint point)

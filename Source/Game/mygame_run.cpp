@@ -6,13 +6,6 @@
 #include "../Library/gameutil.h"
 #include "../Library/gamecore.h"
 #include "mygame.h"
-#include "stdlib.h"
-#include <fstream>
-#include <iostream>
-#include <string>
-#include <algorithm>
-#include <sstream>
-
 
 using namespace game_framework;
 
@@ -34,20 +27,18 @@ void CGameStateRun::OnBeginState()
 
 void CGameStateRun::OnMove()							// 移動遊戲元素
 {
+	
 }
 
 void CGameStateRun::OnInit()  								// 遊戲的初值及圖形設定
 {
 	round.init_brick();
 	boss.Boss_init();
-	Menu1.LoadBitmap("../Resources/menu/load_start1.bmp");
-	Menu2.LoadBitmap("../Resources/menu/load_start2.bmp");
+	Menu1.LoadBitmap("Resources/menu/load_start1.bmp");
+	Menu2.LoadBitmap("Resources/menu/load_start2.bmp");
 	Menu1.SetTopLeft(0, 90);
 	Menu2.SetTopLeft(0, 90);
 }
-
-
-
 
 void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
@@ -88,17 +79,16 @@ void CGameStateRun::OnKeyDown(UINT nChar, UINT nRepCnt, UINT nFlags)
 
 void CGameStateRun::OnKeyUp(UINT nChar, UINT nRepCnt, UINT nFlags)
 {
-
+	
 }
 
 void CGameStateRun::OnLButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作
 {
-	round.check_start = 1;
 }
 
 void CGameStateRun::OnLButtonUp(UINT nFlags, CPoint point)	// 處理滑鼠的動作
 {
-
+	round.check_start = 1;
 }
 
 void CGameStateRun::OnMouseMove(UINT nFlags, CPoint point)	// 處理滑鼠的動作
@@ -119,7 +109,6 @@ void CGameStateRun::OnRButtonDown(UINT nFlags, CPoint point)  // 處理滑鼠的動作
 void CGameStateRun::OnRButtonUp(UINT nFlags, CPoint point)	// 處理滑鼠的動作
 {
 }
-
 
 void CGameStateRun::OnShow()
 {
@@ -146,9 +135,9 @@ void CGameStateRun::OnShow()
 		round.restart();
 		boss.restart();
 		Menu++;
-		
+
 	}
-	else if(round.roundnumber == 1){
+	else if (round.roundnumber == 1) {
 		roundnumber = round.roundnumber;
 		if (round.check_start) {
 			round.round_start();
@@ -158,7 +147,7 @@ void CGameStateRun::OnShow()
 				round.start_run();
 			}
 			else {
-				if (round.Set_round.brick_init)round.round_to_init("../map/round1.txt");
+				if (round.Set_round.brick_init)round.round_to_init("map/round1.txt");
 				round.round_init(1);
 			}
 		}
@@ -169,7 +158,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round2.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round2.txt");
 			round.round_init(2);
 		}
 	}
@@ -179,7 +168,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round3.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round3.txt");
 			round.round_init(3);
 		}
 	}
@@ -189,7 +178,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round4.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round4.txt");
 			round.round_init(4);
 		}
 	}
@@ -199,7 +188,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round5.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round5.txt");
 			round.round_init(5);
 		}
 	}
@@ -209,7 +198,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round6.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round6.txt");
 			round.round_init(6);
 		}
 	}
@@ -219,7 +208,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round7.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round7.txt");
 			round.round_init(7);
 		}
 	}
@@ -229,7 +218,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round8.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round8.txt");
 			round.round_init(8);
 		}
 	}
@@ -239,7 +228,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round9.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round9.txt");
 			round.round_init(9);
 		}
 	}
@@ -249,7 +238,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round10.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round10.txt");
 			round.round_init(10);
 		}
 	}
@@ -259,7 +248,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round11.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round11.txt");
 			round.round_init(11);
 		}
 	}
@@ -269,7 +258,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round12.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round12.txt");
 			round.round_init(12);
 		}
 	}
@@ -279,7 +268,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round13.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round13.txt");
 			round.round_init(13);
 		}
 	}
@@ -289,7 +278,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round14.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round14.txt");
 			round.round_init(14);
 		}
 	}
@@ -299,7 +288,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round15.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round15.txt");
 			round.round_init(15);
 		}
 	}
@@ -309,7 +298,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round16.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round16.txt");
 			round.round_init(16);
 		}
 	}
@@ -319,7 +308,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round17.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round17.txt");
 			round.round_init(17);
 		}
 	}
@@ -329,7 +318,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round18.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round18.txt");
 			round.round_init(18);
 		}
 	}
@@ -339,7 +328,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round19.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round19.txt");
 			round.round_init(19);
 		}
 	}
@@ -349,7 +338,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round20.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round20.txt");
 			round.round_init(20);
 		}
 	}
@@ -359,7 +348,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round21.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round21.txt");
 			round.round_init(21);
 		}
 	}
@@ -369,7 +358,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round22.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round22.txt");
 			round.round_init(22);
 		}
 	}
@@ -379,7 +368,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round23.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round23.txt");
 			round.round_init(23);
 		}
 	}
@@ -389,7 +378,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round24.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round24.txt");
 			round.round_init(24);
 		}
 	}
@@ -399,7 +388,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round25.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round25.txt");
 			round.round_init(25);
 		}
 	}
@@ -409,7 +398,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round26.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round26.txt");
 			round.round_init(26);
 		}
 	}
@@ -419,7 +408,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round27.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round27.txt");
 			round.round_init(27);
 		}
 	}
@@ -429,7 +418,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round28.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round28.txt");
 			round.round_init(28);
 		}
 	}
@@ -439,7 +428,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round29.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round29.txt");
 			round.round_init(29);
 		}
 	}
@@ -449,7 +438,7 @@ void CGameStateRun::OnShow()
 			round.round_start();
 		}
 		else {
-			if (round.Set_round.brick_init)round.round_to_init("../map/round30.txt");
+			if (round.Set_round.brick_init)round.round_to_init("map/round30.txt");
 			round.round_init(30);
 		}
 	}
@@ -477,12 +466,3 @@ void CGameStateRun::OnShow()
 		}
 	}
 }
-
-
-
-
-
-
-
-
-
