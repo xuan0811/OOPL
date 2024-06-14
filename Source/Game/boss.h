@@ -26,8 +26,8 @@ private:
 	int dead_time = 0;
 	int end_x = 0;
 	int end_y = 1000;
-	int attack_x[5] = { 495 ,495 ,495 ,495 ,495 };
-	int attack_y[5] = { 400 ,400 ,400 ,400 ,400 };
+	int attack_x[5] = { 495 ,495 ,495 ,495 ,495};
+	int attack_y[5] = { 400 ,400 ,400 ,400 ,400};
 
 	CMovingBitmap attack[5];
 	CMovingBitmap Boss_background;
@@ -35,4 +35,5 @@ private:
 	CMovingBitmap ENDING;
 	CMovingBitmap ENDING2;
 	CMovingBitmap ENDING3;
+	
 };

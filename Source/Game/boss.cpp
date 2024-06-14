@@ -33,6 +33,7 @@ void BOSS::Boss_init() {
 	for (int i = 0; i < 5; i++) {
 		attack[i].LoadBitmap("../Resources/player/ball.bmp");
 	}
+	
 }
 
 void BOSS::Boss_start() {
@@ -94,7 +95,6 @@ void BOSS::Boss_overlab(CMovingBitmap ball, CMovingBitmap play,int heart[]) {
 			break;
 		}
 	}
-
 }
 
 void BOSS::Boss_attack1() {

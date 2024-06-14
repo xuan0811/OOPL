@@ -453,7 +453,7 @@ void CGameStateRun::OnShow()
 			round.round_init(30);
 		}
 	}
-	else if (round.roundnumber == 31) {
+	else if (round.roundnumber >= 31) {
 		roundnumber = round.roundnumber;
 		if (round.check_start) {
 			if (boss.boss_heart > 0) {

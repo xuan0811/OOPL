@@ -59,12 +59,11 @@
 				y_moving = -6;
 			}
 		}
-
 		for (int i = 79; i >= 0; i--) {
 			if (CMovingBitmap::IsOverlap(Ball, brick_black[brick_id_round[i]]) == true &&  check_overlap[i] == 1) {
 				brick[i] -= 1;
 				if(brick[i] ==0)check_overlap[i] = 0;
-				if (ball_y < brick_black[brick_id_round[i]].GetTop() - 12 || ball_y > brick_black[brick_id_round[i]].GetTop() + 13) {
+				if (ball_y < brick_black[brick_id_round[i]].GetTop() - 12 && y_moving > 0 || ball_y > brick_black[brick_id_round[i]].GetTop() + 13 && y_moving < 0) {
 					y_moving *= -1;
 					ball_y = ball_y + y_moving;
 				}
@@ -92,17 +91,14 @@
 		if (ball_x >= background_right_max + 18) {
 			x_moving *= -1;
 			ball_x = ball_x + x_moving;
-			ball_y = ball_y + y_moving;
 		}
 		else if (ball_x <= background_left_max +2) {
 			x_moving *= -1;
 			ball_x = ball_x + x_moving;
-			ball_y = ball_y + y_moving;
 		}
 
 		if (ball_y <= background_top_max) {
 			y_moving *= -1;
-			ball_x = ball_x + x_moving;
 			ball_y = ball_y + y_moving;
 		}
 		else if (ball_y > 800 || CMovingBitmap::IsOverlap(Play, Ball) == true) {
@@ -136,11 +132,13 @@
 			}
 		}
 		else if (CMovingBitmap::IsOverlap(boss, Ball) == true) {
-			if (ball_y >= 530 || ball_y <= 210) {
+			if (ball_y > 534 && y_moving < 0 || ball_y < 206 && y_moving > 0) {
 				y_moving *= -1;
+				ball_y = ball_y + y_moving;
 			}
-			if (ball_x >= 345 && ball_x <= 640 && ball_y <= 530 && ball_y >= 210) {
+			if (ball_x >= 345 && ball_x <= 640 && ball_y <= 534 && ball_y >= 206) {
 				x_moving *= -1;
+				ball_x = ball_x + x_moving;
 			}
 		}
 		return check_start;
